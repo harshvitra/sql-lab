@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Overview of the project
 
-## Getting Started
+## Outline
 
-First, run the development server:
+Create, design and implement a web-based application capable of running SQL queries and displaying the results of said query. The application must include a space which accepts SQL queries in the form of user inputs, then runs the given query, and displays the result within the application.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+# External Libraries used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Code editor - React Ace 
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Research - Checked the following platforms
+1. Monaco Editor by Microsoft - https://github.com/microsoft/monaco-editor - Has all functionalities but too large in size
+2. React textarea code editor - https://github.com/uiwjs/react-textarea-code-editor - Has some issues plus the community is smaller than the next.
+3. React ace - https://github.com/securingsincity/react-ace - Good community and covers all features needed 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+# Page load time
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Optimisations performed
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Project Scope
+
+# Must have features:
+- Textarea to accept SQL queries. 
+- Data sources can be picked from [here](https://github.com/graphql-compose/graphql-compose-examples/tree/master/examples/northwind/data/csv)
+- More than one query needed
+- Data has to be shown in table format
+- Predefined set of queries/tables needed
+- Way to toggle between different queries
+
+# Good to have features:
+Now that you have a list of essential and crucial features, start thinking of features that will add more value to your application, features that act as top-ups, cherries on the cake, if you will. These additional features make your application more useful and make your user’s life a tad bit easier. Think of forms with inputs, buttons, and custom field validations.
+- *Assume that a data analyst is going to use your application for an entire day. What are the features that will help them breeze through the day’s workload?*
+
+# Features not in scope:
+- Backend
+- Query engine
+- Query Validation
+- Syntax Validations
+- Queries need not be specific and need not result into actual data query
+- The data and query need not be in sync
+
+# Non-functional Requirements:
+1. Use a JavaScript framework for your application, such as [React](https://reactjs.org/), [Vue.js](https://vuejs.org/), [Svelte](https://svelte.dev/), or any other framework. **DO NOT CODE IN VANILLA JAVASCRIPT.**
+2. Host your code on a version control system, such as GitHub, GitLab or BitBucket. **SEND US THE LINK TO YOUR PROJECT, NOT A ZIP FILE.**
+3. Deploy your application on services such as [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/), and send us the link to your deployed project. **DO NOT EXPECT THE JUDGE TO INSTALL YOUR APPLICATION ON A LOCAL INSTANCE.**
+4. You are free to use any external library and dependency, as long as you mention it in the README.
+5. In the README of your project, include the following details:
+    1. A basic overview of your project.
+    2. The JavaScript framework you chose, along with any major plugins or packages you installed.
+    3. The page load time of your application, and how you measured this time.
+    4. Any optimisations you did to decrease the load time or increase performance.
+You get brownie points if you can render a large amount of rows in your application without breaking the browser, or without crashing it. If you can’t, no biggie.
+
+
+# Research 
+
+- Inspiration from SQL Lab in Superset - https://apache-superset.readthedocs.io/en/0.35.2/sqllab.html
+
+
+# More ideas
+- A form where we can change different parts of the SQL query separately 
+- Export data in CSV
+- Save queries for reusing them with description
+- Multi-tab to run and analyze multiple queries at once
+- Browse database metadata: tables, columns, indexes, partitions
+- Hit alt + enter as a keyboard shortcut to run your query
+- Click on a table to get preview of that table and the metadata
+- Limit the number of Rows
+- Table result can have option to Explore (analytics)
+- Filter results
+- Add ChatGPT3 to convert human statements to SQL queries
+- Create a query history - state (success), start time, duration, progress, sql query, row
+- Select numerical metric - show stats - min, max, avg, sum

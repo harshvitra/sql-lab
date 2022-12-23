@@ -1,0 +1,51 @@
+@import './theme';
+
+.main{
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 40px auto;
+}
+
+.button, .buttonSecondary{
+  border-radius: 10px;
+  padding: 16px 24px;
+  background-color: $primaryColor;
+  color: $fontColorLight;
+  font-weight: 600;
+  border: 0px;
+  margin-top: 40px;
+  font-size: 16px;
+  &:hover{
+    cursor: pointer;
+    background-color: $primaryColorDark;
+  }
+}
+.buttonSecondary{
+  margin-left: 10px;
+  background-color: $greyColor;
+  &:hover{
+    color: $fontColor;
+    background-color: $greyColor;
+  }
+}
+
+.querySelector{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  height: 40px;
+  width: 300px;
+  border:1px solid #ededed;
+  background-color: #ededed;
+  border-radius: 4px;
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.errorText{
+  color: $dangerColor;
+  margin-top: 5px;
+}

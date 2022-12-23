@@ -1,0 +1,65 @@
+@import './theme';
+
+.tableContainer{
+    overflow-x: scroll;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 0 20px rgba(124, 124, 124, 0.15);
+    thead tr {
+        background-color: $primaryColor;
+        color: $fontColorLight;
+        text-align: left;
+    }
+    th, td {
+        padding: 12px 15px;
+    }
+    tbody tr {
+        border-bottom: 1px solid $greyColor;
+    }
+    tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+    tbody tr:last-of-type {
+        border-bottom: 2px solid $primaryColor;
+    }
+    tbody tr {
+        &:hover{
+            background-color: rgba($color: $secondaryColor, $alpha: 0.2);
+            color: $primaryColor;
+        }
+    }
+}
+
+.paginationContainer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-end;
+    button{
+        padding: 8px 20px;
+        height: 40px;
+        border:1px solid $greyColor;
+        background-color: $greyColor;
+        border-radius: 4px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    input, select{
+        padding: 8px 12px;
+        height: 40px;
+        width: 120px;
+        border:1px solid #ededed;
+        background-color: #ededed;
+        border-radius: 4px;
+        margin-left: 10px;
+    }
+}
