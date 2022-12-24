@@ -4,6 +4,9 @@
 
 Create, design and implement a web-based application capable of running SQL queries and displaying the results of said query. The application must include a space which accepts SQL queries in the form of user inputs, then runs the given query, and displays the result within the application.
 
+<img width="1440" alt="Screenshot 2022-12-24 at 7 31 51 PM" src="https://user-images.githubusercontent.com/25605193/209439187-5167f643-6aec-4803-b792-4a015bed8daf.png">
+
+
 # Framework used - NEXT.js 
 
 URL - https://nextjs.org/
