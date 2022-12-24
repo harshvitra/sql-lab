@@ -43,6 +43,7 @@ export default function CustomTable({ tableName }: Props) {
       {...{
         data,
         columns,
+        tableName
       }}
     />
   ) : <p>Loading...</p>

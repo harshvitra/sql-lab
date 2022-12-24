@@ -3,20 +3,23 @@ import AceEditor from "react-ace";
 import "ace-builds/src-min-noconflict/ext-language_tools";
 import "ace-builds/src-min-noconflict/mode-mysql";
 import "ace-builds/src-noconflict/theme-twilight";
-import styles from '../../styles/Home.module.scss'
-import { getTableName, queries } from '../utils/getTableName';
+import styles from '../../../styles/Home.module.scss';
+import { getTableName, queries } from '../../utils/getTableName';
+
 type Props = {
-  query: string;
-  setQuery: (value: string) => void;
   setTableName: (value: string) => void;
   tableName: string;
 }
 
-function SQLEditor({ setQuery, query, setTableName, tableName }: Props) {
+function SQLEditor({ setTableName, tableName }: Props) {
 
   const [error, setError] = React.useState('');
 
+  const [query, setQuery] = React.useState("");
+
   const updateQuery = (query: string) => {
+    // If the query is valid i.e. can return a table name, we set the table name and the query
+    // Else we set error and ask user to enter valid query
     if (getTableName(query)) {
       setTableName(getTableName(query))
       setQuery(query)
@@ -90,12 +93,14 @@ function SQLEditor({ setQuery, query, setTableName, tableName }: Props) {
         )}
 
         {/* Button to reset the query and the table */}
-        {query && tableName && <button onClick={() => {
-          setQuery('')
-          setTableName('')
-        }} className={styles.buttonSecondary}>
-          Reset
-        </button>}
+        {query && tableName && 
+          (<button onClick={() => {
+            setQuery('')
+            setTableName('')
+          }} className={styles.buttonSecondary}>
+            Reset
+          </button>)
+        }
       </div>
     </div>
   )

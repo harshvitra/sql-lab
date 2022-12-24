@@ -33,7 +33,7 @@
     }
 }
 
-.paginationContainer{
+.tableOptionsContainer{
     margin-top: 40px;
     display: flex;
     flex-direction: row;
@@ -43,7 +43,7 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: flex-end;
-    button{
+    button, a{
         padding: 8px 20px;
         height: 40px;
         border:1px solid $greyColor;

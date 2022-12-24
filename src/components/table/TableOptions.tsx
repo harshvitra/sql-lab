@@ -5,12 +5,22 @@ import {
 import styles from './../../../styles/Table.module.scss'
 
 type Props = {
-    table: ReactTable<any>
+    table: ReactTable<any>;
+    tableName: string;
 }
 
-function Pagination({ table }: Props) {
+function TableOptions({ table, tableName }: Props) {
     return (
-        <div className={styles.paginationContainer}>
+        <div className={styles.tableOptionsContainer}>
+
+            {/* Button to download data */}
+            <a
+                href={`/assets/csvfiles/${tableName}.csv`}
+                target='_blank'
+                rel="noreferrer"
+            >
+                Download
+            </a>
 
             {/* Button to go to the first page */}
             <button
@@ -83,4 +93,4 @@ function Pagination({ table }: Props) {
     )
 }
 
-export default Pagination
+export default TableOptions

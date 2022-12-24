@@ -9,15 +9,17 @@ import {
   flexRender,
 } from '@tanstack/react-table'
 import styles from './../../../styles/Table.module.scss'
-import Pagination from './Pagination'
+import TableOptions from './TableOptions'
 import TableHead from './TableHead'
 
 export default function Table({
   data,
   columns,
+  tableName
 }: {
   data: any[]
   columns: ColumnDef<any>[]
+  tableName: string
 }) {
   const table = useReactTable({
     data,
@@ -32,8 +34,8 @@ export default function Table({
 
   return (
     <div>
-      {/* Pagination */}
-      <Pagination table={table} />
+      {/* TableOptions */}
+      <TableOptions table={table} tableName={tableName} />
 
       <div className={styles.tableContainer}>
 
@@ -70,8 +72,8 @@ export default function Table({
 
       </div>
 
-      {/* Pagination */}
-      <Pagination table={table} />
+      {/* TableOptions */}
+      <TableOptions table={table} tableName={tableName} />
     </div>
   )
 }
