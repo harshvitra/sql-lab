@@ -34,11 +34,16 @@ Headless UI for building powerful tables & datagrids
 
 # Page load time
 
+Page speed calculated - https://pagespeed.web.dev/report?url=https%3A%2F%2Fsql-lab.vercel.app%2F&form_factor=desktop 
+
+<img width="606" alt="Screenshot 2022-12-24 at 7 21 42 PM" src="https://user-images.githubusercontent.com/25605193/209438848-ddbf75e5-ab21-409f-bc32-8d4b2d1dbf4e.png">
 
 
 # Optimisations performed
 
-
+- Replaced the sql editor library - from Monaco to Ace
+- Using dynamic from 'next/dynamic' to load the editor dynamically
+- Using React.Suspense to make sure that there is a loader until the component is ready to render
 
 
 # Project Scope
