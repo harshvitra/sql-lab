@@ -79,6 +79,11 @@ Now that you have a list of essential and crucial features, start thinking of fe
 - Queries need not be specific and need not result into actual data query
 - The data and query need not be in sync
 
+# Features and ideas: 
+
+<img width="1015" alt="Screenshot 2022-12-26 at 3 10 19 PM" src="https://user-images.githubusercontent.com/25605193/209533254-07645e5c-0b56-4476-bb1f-53d60f946ce4.png">
+
+
 ## Non-functional Requirements:
 1. Use a JavaScript framework for your application, such as [React](https://reactjs.org/), [Vue.js](https://vuejs.org/), [Svelte](https://svelte.dev/), or any other framework. **DO NOT CODE IN VANILLA JAVASCRIPT.**
 2. Host your code on a version control system, such as GitHub, GitLab or BitBucket. **SEND US THE LINK TO YOUR PROJECT, NOT A ZIP FILE.**
